@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(BOKUTOTU)
+
+add_executable(MAIN main.cpp)
+target_link_libraries(MAIN PRIVATE shared_lib lib2)
+# target_link_libraries(MAIN PRIVATE lib2)
+target_include_directories(MAIN PRIVATE ../LIB/include ../LIB2/include)
+# target_include_directories(MAIN PRIVATE ../LIB2/include)
+target_link_directories(MAIN PRIVATE ../LIB/bin/ ../LIB2/bin)
+# target_link_directories(MAIN PRIVATE ../LIB2/bin/)
